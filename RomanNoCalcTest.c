@@ -50,6 +50,17 @@ START_TEST(whenIpNumberCheckispassedLitReturnsOne)
 	RomanNo[0] = 'L';
 	ck_assert_int_eq(IpCheck(RomanNo),1);
 
+//Test-1-4
+}
+END_TEST
+
+START_TEST(whenIpNumberCheckispassedCitReturnsOne)
+{
+#line 30
+	
+	RomanNo[0] = 'C';
+	ck_assert_int_eq(IpCheck(RomanNo),1);
+
 
 }
 END_TEST
@@ -66,6 +77,7 @@ int main(void)
     tcase_add_test(tc1_1, whenIpNumberCheckispassedVitReturnsOne);
     tcase_add_test(tc1_1, whenIpNumberCheckispassedXitReturnsOne);
     tcase_add_test(tc1_1, whenIpNumberCheckispassedLitReturnsOne);
+    tcase_add_test(tc1_1, whenIpNumberCheckispassedCitReturnsOne);
 
     srunner_run_all(sr, CK_ENV);
     nf = srunner_ntests_failed(sr);
