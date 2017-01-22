@@ -1,0 +1,36 @@
+Roman Number Calculator (Addition or Subtraction)
+
+Project: By Vivek Shah
+=======================================================================
+Compiler: GCC
+Framework: Check (FOR TDD)
+=======================================================================
+Roman Numbers:
+I = 1 || V = 5 || X = 10 || L = 50 || C = 100 || D = 500 || M = 1000
+=======================================================================
+In this program as we are dealing Roman number i/p would be string, and that string would be capital letters only
+=======================================================================
+>Test-1
+Check the Input Roman Number provided by User Should only Contain Roman Numbers i.e I/V/X/L/C/D/M.
+
+Will start with checking one single digit number. i.e if Input is 'I' Function should return 1 otherwise 0.
+
+i.e if Input is 'I' test PASS, if 'i' test fail.
+
+after test for 'I;' move to another Input 'V', and we will move from testing of one Input to another in folllowing manor.
+
+>>Test-1-1: if Input is 'V' test PASS, if 'v' test fail.
+>>Test-1-2: if Input is 'X' test PASS, if 'x' test fail.
+>>Test-1-3: if Input is 'L' test PASS, if 'l' test fail.
+>>Test-1-4: if Input is 'C' test PASS, if 'c' test fail.
+>>Test-1-5: if Input is 'D' test PASS, if 'd' test fail.
+>>Test-1-6: if Input is 'M' test PASS, if 'm' test fail.
+=======================================================================
+>Test-2
+Will move from checking one single digit number to number with multiple characters.
+
+i.e if Input is 'MVXLI' test PASS, if input is 'MvXLI' or any character of input string is in lowwer case or not from Roman character set, the test should fail.
+
+
+
+
