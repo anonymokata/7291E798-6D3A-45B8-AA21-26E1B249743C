@@ -37,5 +37,11 @@ char RomanNo[20];
 	RomanNo[0] = 'D';
 	ck_assert_int_eq(IpCheck(RomanNo),1);
 
+//Test-1-6
+#test whenIpNumberCheckispassedMitReturnsOne
+	
+	RomanNo[0] = 'M';
+	ck_assert_int_eq(IpCheck(RomanNo),1);
+
 
 
