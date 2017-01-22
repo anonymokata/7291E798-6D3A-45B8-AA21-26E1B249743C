@@ -1,7 +1,11 @@
 #include "IpNumberCheck.h"
-
+char RomanNo[20];
 #test whenIpNumberCheckispassedIitReturnsOne
 	
-	char RomanNo[20];
 	RomanNo[0] = 'I';
+	ck_assert_int_eq(IpCheck(RomanNo),1);
+
+#test whenIpNumberCheckispassedVitReturnsOne
+	
+	RomanNo[0] = 'V';
 	ck_assert_int_eq(IpCheck(RomanNo),1);

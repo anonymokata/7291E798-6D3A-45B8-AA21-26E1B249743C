@@ -7,13 +7,22 @@
 
 #line 1 "RomanNoCalcTest.check"
 #include "IpNumberCheck.h"
-
+char RomanNo[20];
 START_TEST(whenIpNumberCheckispassedIitReturnsOne)
 {
 #line 4
 	
-	char RomanNo[20];
 	RomanNo[0] = 'I';
+	ck_assert_int_eq(IpCheck(RomanNo),1);
+
+}
+END_TEST
+
+START_TEST(whenIpNumberCheckispassedVitReturnsOne)
+{
+#line 9
+	
+	RomanNo[0] = 'V';
 	ck_assert_int_eq(IpCheck(RomanNo),1);
 }
 END_TEST
@@ -27,6 +36,7 @@ int main(void)
 
     suite_add_tcase(s1, tc1_1);
     tcase_add_test(tc1_1, whenIpNumberCheckispassedIitReturnsOne);
+    tcase_add_test(tc1_1, whenIpNumberCheckispassedVitReturnsOne);
 
     srunner_run_all(sr, CK_ENV);
     nf = srunner_ntests_failed(sr);
