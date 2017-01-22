@@ -47,8 +47,10 @@ START_TEST(whenIpNumberCheckispassedLitReturnsOne)
 {
 #line 24
 	
-	RomanNo[0] = 'X';
+	RomanNo[0] = 'L';
 	ck_assert_int_eq(IpCheck(RomanNo),1);
+
+
 }
 END_TEST
 
