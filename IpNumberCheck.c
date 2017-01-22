@@ -21,6 +21,9 @@ int IpCheck(char RomanNo[])
 		case 'C':
 			IpNoStatus = 1;
 			break;
+		case 'D':
+			IpNoStatus = 1;
+			break;
 		default:
 			IpNoStatus = 0;
 			break;

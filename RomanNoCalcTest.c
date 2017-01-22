@@ -9,7 +9,7 @@
 #include "IpNumberCheck.h"
 char RomanNo[20];
 //Visit TestPlan.txt for more details about the tests
-//Test-1
+//Test-1 
 START_TEST(whenIpNumberCheckispassedIitReturnsOne)
 {
 #line 6
@@ -61,6 +61,18 @@ START_TEST(whenIpNumberCheckispassedCitReturnsOne)
 	RomanNo[0] = 'C';
 	ck_assert_int_eq(IpCheck(RomanNo),1);
 
+//Test-1-5
+}
+END_TEST
+
+START_TEST(whenIpNumberCheckispassedDitReturnsOne)
+{
+#line 36
+	
+	RomanNo[0] = 'D';
+	ck_assert_int_eq(IpCheck(RomanNo),1);
+
+
 
 }
 END_TEST
@@ -78,6 +90,7 @@ int main(void)
     tcase_add_test(tc1_1, whenIpNumberCheckispassedXitReturnsOne);
     tcase_add_test(tc1_1, whenIpNumberCheckispassedLitReturnsOne);
     tcase_add_test(tc1_1, whenIpNumberCheckispassedCitReturnsOne);
+    tcase_add_test(tc1_1, whenIpNumberCheckispassedDitReturnsOne);
 
     srunner_run_all(sr, CK_ENV);
     nf = srunner_ntests_failed(sr);
