@@ -9,3 +9,10 @@ char RomanNo[20];
 	
 	RomanNo[0] = 'V';
 	ck_assert_int_eq(IpCheck(RomanNo),1);
+
+#test whenIpNumberCheckispassedXitReturnsOne
+	
+	RomanNo[0] = 'X';
+	ck_assert_int_eq(IpCheck(RomanNo),1);
+
+
