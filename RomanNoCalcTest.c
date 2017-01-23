@@ -411,6 +411,41 @@ START_TEST(whenDecimalToRomanIsPassedSixtyItShouldReturnLX)
 	c2 = DecimalToRoman(60);
 	ck_assert_str_eq(c2,"LX");	
 
+//Test-10-6
+}
+END_TEST
+
+START_TEST(whenDecimalToRomanIsPassedSeventyItShouldReturnLXX)
+{
+#line 236
+	
+	c2 = (char *)malloc(30);
+	c2 = DecimalToRoman(70);
+	ck_assert_str_eq(c2,"LXX");	
+
+//Test-10-7
+}
+END_TEST
+
+START_TEST(whenDecimalToRomanIsPassedEightyItShouldReturnLXXX)
+{
+#line 243
+	
+	c2 = (char *)malloc(30);
+	c2 = DecimalToRoman(80);
+	ck_assert_str_eq(c2,"LXXX");
+
+//Test-10-8
+}
+END_TEST
+
+START_TEST(whenDecimalToRomanIsPassedNintyItShouldReturnXC)
+{
+#line 250
+	
+	c2 = (char *)malloc(30);
+	c2 = DecimalToRoman(90);
+	ck_assert_str_eq(c2,"XC");		
 }
 END_TEST
 
@@ -457,6 +492,9 @@ int main(void)
     tcase_add_test(tc1_1, whenDecimalToRomanIsPassedFourtyItShouldReturnXL);
     tcase_add_test(tc1_1, whenDecimalToRomanIsPassedFiftyItShouldReturnL);
     tcase_add_test(tc1_1, whenDecimalToRomanIsPassedSixtyItShouldReturnLX);
+    tcase_add_test(tc1_1, whenDecimalToRomanIsPassedSeventyItShouldReturnLXX);
+    tcase_add_test(tc1_1, whenDecimalToRomanIsPassedEightyItShouldReturnLXXX);
+    tcase_add_test(tc1_1, whenDecimalToRomanIsPassedNintyItShouldReturnXC);
 
     srunner_run_all(sr, CK_ENV);
     nf = srunner_ntests_failed(sr);

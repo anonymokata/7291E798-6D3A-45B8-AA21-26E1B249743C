@@ -231,3 +231,23 @@ char *c2;
 	c2 = DecimalToRoman(60);
 	ck_assert_str_eq(c2,"LX");	
 
+//Test-10-6
+#test whenDecimalToRomanIsPassedSeventyItShouldReturnLXX
+	
+	c2 = (char *)malloc(30);
+	c2 = DecimalToRoman(70);
+	ck_assert_str_eq(c2,"LXX");	
+
+//Test-10-7
+#test whenDecimalToRomanIsPassedEightyItShouldReturnLXXX
+	
+	c2 = (char *)malloc(30);
+	c2 = DecimalToRoman(80);
+	ck_assert_str_eq(c2,"LXXX");
+
+//Test-10-8
+#test whenDecimalToRomanIsPassedNintyItShouldReturnXC
+	
+	c2 = (char *)malloc(30);
+	c2 = DecimalToRoman(90);
+	ck_assert_str_eq(c2,"XC");		
