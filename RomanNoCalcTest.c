@@ -150,6 +150,16 @@ START_TEST(whenRomanToDecimalIsPassedCitReturnsHundred)
 	RomanNo[0] = 'C';
 	ck_assert_int_eq(RomanToDecimal(RomanNo),100);
 
+//Test-3-5
+}
+END_TEST
+
+START_TEST(whenRomanToDecimalIsPassedDitReturnsFiveHundred)
+{
+#line 85
+	
+	RomanNo[0] = 'D';
+	ck_assert_int_eq(RomanToDecimal(RomanNo),500);
 }
 END_TEST
 
@@ -174,6 +184,7 @@ int main(void)
     tcase_add_test(tc1_1, whenRomanToDecimalIsPassedXitReturnsTen);
     tcase_add_test(tc1_1, whenRomanToDecimalIsPassedLitReturnsFifty);
     tcase_add_test(tc1_1, whenRomanToDecimalIsPassedCitReturnsHundred);
+    tcase_add_test(tc1_1, whenRomanToDecimalIsPassedDitReturnsFiveHundred);
 
     srunner_run_all(sr, CK_ENV);
     nf = srunner_ntests_failed(sr);

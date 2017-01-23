@@ -80,3 +80,8 @@ char RomanNo[20];
 	RomanNo[0] = 'C';
 	ck_assert_int_eq(RomanToDecimal(RomanNo),100);
 
+//Test-3-5
+#test whenRomanToDecimalIsPassedDitReturnsFiveHundred 
+	
+	RomanNo[0] = 'D';
+	ck_assert_int_eq(RomanToDecimal(RomanNo),500);
