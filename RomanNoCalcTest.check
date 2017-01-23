@@ -362,4 +362,21 @@ char *c3;
 	
 	c3 = (char *)malloc(30);
 	c3 = DecimalToRoman(9000);
-	ck_assert_str_eq(c3,"MMMMMMMMM");			
+	ck_assert_str_eq(c3,"MMMMMMMMM");	
+
+//Test-15
+#test whenDecimalToRomanIsPassed1112ItShouldReturnMCXII
+	
+	c3 = (char *)malloc(30);
+	c3 = DecimalToRoman(1112);
+	ck_assert_str_eq(c3,"MCXII");
+
+//Test-15-1
+#test whenDecimalToRomanIsPassed4768ItShouldReturnMMMMDCCLXVIII
+	
+	c3 = (char *)malloc(30);
+	c3 = DecimalToRoman(4768);
+	ck_assert_str_eq(c3,"MMMMDCCLXVIII");
+	
+
+		

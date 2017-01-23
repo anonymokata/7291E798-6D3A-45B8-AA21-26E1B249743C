@@ -2,14 +2,17 @@
 #include<stdlib.h>
 #include "IpNumberCheck.h"
 #include "RomanToDecimal.h"
+#include "AddOrSub.h"
+#include "DecimalToRoman.h"
 
 int main()
 {
 	//Declar the required variables
 	int IpNoStatus = 0;
 	char IpRomanNo1[50], IpRomanNo2[50];
-	int RomanToDecimalNo1=0,RomanToDecimalNo2=0;
-
+	int RomanToDecimalNo1=0,RomanToDecimalNo2=0,Operation=0,Result=0;
+	char *c1;
+	c1 = (char *)malloc(30);
 	//Scan the First Roman Number
 	printf("Enter First Roman No:");
 	scanf("%s", IpRomanNo1);
@@ -36,15 +39,28 @@ int main()
 		IpNoStatus = IpCheck(IpRomanNo2);
 	}
 
-	//Display Scaned Data
-	printf("First Number: %s\tSecond Number: %s\n",IpRomanNo1,IpRomanNo2);
+	//Select Operation 1= Addition and 2=Subtraction
+	printf("Enter 1 for Addition(+) OR Enter 2 for Subtraction(-):");
+	scanf("%d", &Operation);
+	
 
 	//Convert Roman Number to Decimal
 	RomanToDecimalNo1 = RomanToDecimal(IpRomanNo1);
 	RomanToDecimalNo2 = RomanToDecimal(IpRomanNo2);
 	
-	//Display The converted Numbers
-	printf("First Number: %d\t Second Number: %d\n",RomanToDecimalNo1,RomanToDecimalNo2);
+	//Perform Add or Subtraction as per selection
+	if(Operation == 1)
+		Result = Add(RomanToDecimalNo1,RomanToDecimalNo2);
+	else
+		Result = Sub(RomanToDecimalNo1,RomanToDecimalNo2);
 
-return 0;
+	//Convert Result of Addition or Subtraction to Roman Number System
+	c1 = DecimalToRoman(Result);
+
+	//Display The Final Result
+	if(Operation == 1)
+		printf("\nThe Addition is:%s\nThank You For Using My Roman Calc\n",c1);
+	else
+		printf("\nThe Subtraction is:%s\nThank You For Using My Roman Calc\n",c1);
+return 0;	
 }

@@ -15,21 +15,21 @@ char *DecimalToRoman(int decimal)
 		decimal -= 1000;
 		i++;		
 	}	
-	if((decimal >= 100) && (decimal < 1000))
+	if(decimal >= 100) 
 	{
 		value = decimal - (decimal%100);	
 		strcat(RomanNo, hundreds[value/100]);
 		i = i + strlen(hundreds[value/100]);
 		decimal -= value;
 	}
-	if((decimal >= 10) && (decimal < 100))
+	if(decimal >= 10)
 	{
 		value = decimal - (decimal%10);		
 		strcat(RomanNo, tens[value/10]);
 		i = i + strlen(tens[value/10]);
 		decimal -= value; 
 	}
-	if((decimal >= 1) && (decimal < 10))
+	if(decimal >= 1)
 	{
 		strcat(RomanNo, ones[decimal]);
 		i = i + strlen(ones[decimal]);

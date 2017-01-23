@@ -151,4 +151,14 @@ Test Cases:
  Test-14-1  || 2000   ||  'MM'   
  Test-14-2  || 3000   ||  'MMM'
  Test-14-3  || 9000   ||  'MMMMMMMMM'
+=======================================================================
+>Test-15
+Test Cases:
+No  ||I/P  ||  O/P 
+ 1  || 1112   ||  'MCXII'   
+ 2  || 4768   ||  'MMMMDCCLXVIII'
+=======================================================================
+Now will update main.c file to upto this functionality. That is get Input from user about Operation (Addition or Subtraction), Get the resultant value based on operation and convert that decimal value to roman numerals then display the final output.
+=======================================================================
+
  
