@@ -287,9 +287,16 @@ char *c3;
 	c3 = DecimalToRoman(400);
 	ck_assert_str_eq(c3,"CD");
 
-//Test-12-3
+//Test-12-4
 #test whenDecimalToRomanIsPassedFiveHundredItShouldReturnD
 	
 	c3 = (char *)malloc(30);
 	c3 = DecimalToRoman(500);
-	ck_assert_str_eq(c3,"D");			
+	ck_assert_str_eq(c3,"D");
+
+//Test-12-5
+#test whenDecimalToRomanIsPassedSixHundredItShouldReturnDC
+	
+	c3 = (char *)malloc(30);
+	c3 = DecimalToRoman(600);
+	ck_assert_str_eq(c3,"DC");			
