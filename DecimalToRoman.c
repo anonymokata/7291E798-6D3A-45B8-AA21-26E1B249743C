@@ -4,7 +4,7 @@
 char *DecimalToRoman(int decimal)
 {
 	static int i=0,n=20,value=0;
-	static char *hundreds[] = {"1","C","CC","CCC"};
+	static char *hundreds[] = {"1","C","CC","CCC","CD"};
 	static char *tens[] = {"1","X","XX","XXX","XL","L","LX","LXX","LXXX","XC"};
 	static char *ones[] = {"1","I","II","III","IV","V","VI","VII","VIII","IX"};
 	char *RomanNo;

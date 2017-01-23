@@ -278,4 +278,11 @@ char *c3;
 	
 	c3 = (char *)malloc(30);
 	c3 = DecimalToRoman(300);
-	ck_assert_str_eq(c3,"CCC");			
+	ck_assert_str_eq(c3,"CCC");
+
+//Test-12-2
+#test whenDecimalToRomanIsPassedFourHundredItShouldReturnCD
+	
+	c3 = (char *)malloc(30);
+	c3 = DecimalToRoman(400);
+	ck_assert_str_eq(c3,"CD");			
