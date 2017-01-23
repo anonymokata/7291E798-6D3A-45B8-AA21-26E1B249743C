@@ -66,17 +66,72 @@ Ans:
 here 'MLXLVI' = M(1000) + L(50) + XL(L-X=50-10=40) + V(5) + I(1) = 1096
 =======================================================================
 >Test-6
-Perform Addition operation
+Perform Addition operation(Input 1 + Input 2)
 If Input 1 = 'MCDLV' = 1455
 &  Input 2 = 'MXLVI' = 1046
 
 output should be 2501 if its 2501 test pass.
 =======================================================================
 >Test-7
-Perform Subtraction operation
+Perform Subtraction operation(Input 1 - Input 2)
 If Input 1 = 'MCDLV' = 1455
 &  Input 2 = 'MXLVI' = 1046
 
-output should be 49 if its 409 test pass.
+output should be 409 if its 409 test pass.
+=======================================================================
+>Test-8
+Roman Numerals does not have concept of negative numbers so if Input 1 is greater then Input 2 still output should be positive.
+i.e. Perform Subtraction operation 
+If Input 1 = 'MXLVI' = 1046
+&  Input 2 = 'MCDLV' = 1455
+Here Input 1 < Input 2 so it should do (Input 2 - Input 1) not (Input 1 - Input 2)
+output should be 409 not -409
+=======================================================================
+And Now the Main Part comes as we are creating Roman Number calculator we dont want final output as Decimal we need it in Roman Number. So now we will test for conversion from Decimal to Roman Numbers.
+======================================================================= 
+>Test-9
+We will start with simple single digit number conversion.
+If Input to Conversion function is 1 Output should be 'I'
+Test Cases:
+    No     ||I/P  ||  O/P   |
+-----------||-----||--------|
+ Test-9-1  || 2   ||  'II'   
+ Test-9-2  || 3   ||  'III'
+ Test-9-3  || 4   ||  'IV'
+ Test-9-4  || 5   ||  'V'
+ Test-9-5  || 6   ||  'VI'
+ Test-9-6  || 7   ||  'VII'   
+ Test-9-7  || 8   ||  'VIII'
+ Test-9-8  || 9   ||  'IX'
+======================================================================= 
+>Test-10
+We will start with Double digit number conversion.
+If Input to Conversion function is 10 Output should be 'X'
+Test Cases:
+    No     || I/P  ||  O/P   |
+-----------||------||--------|
+ Test-9-1  || 20   ||  'XX'   
+ Test-9-2  || 30   ||  'XXX'
+ Test-9-3  || 40   ||  'XL'
+ Test-9-4  || 50   ||  'L'
+ Test-9-5  || 60   ||  'LX'   
+ Test-9-6  || 70   ||  'LXX'
+ Test-9-7  || 80   ||  'LXXX'
+ Test-9-8  || 90   ||  'XC'
+======================================================================= 
+>Test-11
+We will start with Tripple digit number conversion.
+If Input to Conversion function is 100 Output should be 'C'
+Test Cases:
+    No     ||  I/P  ||  O/P   |
+-----------||-------||--------|
+ Test-9-1  || 200   ||  'CC'   
+ Test-9-2  || 300   ||  'CCC'
+ Test-9-3  || 400   ||  'CD'
+ Test-9-4  || 500   ||  'D'
+ Test-9-5  || 600   ||  'DC'   
+ Test-9-6  || 700   ||  'DCC'
+ Test-9-7  || 800   ||  'DCCC'
+ Test-9-8  || 900   ||  'CM'
 
 

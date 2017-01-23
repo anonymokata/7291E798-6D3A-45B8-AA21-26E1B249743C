@@ -1,10 +1,13 @@
 #include "IpNumberCheck.h"
 #include "RomanToDecimal.h"
 #include "AddOrSub.h"
+#include "DecimalToRoman.h"
+#include<stdlib.h>
 char RomanNo[20];
 char RomanNo1[] = "MCDLV";
 char RomanNo2[] = "MXLVI";
 char RomanNo3[] = "IV";
+
 //Visit TestPlan.txt for more details about the tests
 //Test-1 
 #test whenIpNumberCheckispassedIitReturnsOne 
@@ -114,4 +117,20 @@ char RomanNo3[] = "IV";
 #test whenSubIsPassedTwoValuesItReturnsItSubtraction							
 
 	ck_assert_int_eq(Sub(RomanToDecimal(RomanNo1),RomanToDecimal(RomanNo2)),409);
+
+//Test-8
+#test whenSubIsPassedTwoValuesItReturnsPositiveValueOfItsSubtraction
+//Where first value is less then second value							
+
+	ck_assert_int_eq(Sub(RomanToDecimal(RomanNo2),RomanToDecimal(RomanNo1)),409);
+
+//Test-9
+#test whenDecimalToRomanIsPassedOneItShouldReturnI
+	char *c1;
+	c1 = (char *)malloc(30);
+	c1 = DecimalToRoman(1);
+	ck_assert_str_eq(c1,"I");
+
+
+	
 
