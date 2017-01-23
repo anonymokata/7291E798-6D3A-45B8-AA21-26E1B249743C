@@ -495,7 +495,7 @@ START_TEST(whenDecimalToRomanIsPassedThreeHundredItShouldReturnCCC)
 	c3 = DecimalToRoman(300);
 	ck_assert_str_eq(c3,"CCC");
 
-//Test-12-2
+//Test-12-3
 }
 END_TEST
 
@@ -505,7 +505,19 @@ START_TEST(whenDecimalToRomanIsPassedFourHundredItShouldReturnCD)
 	
 	c3 = (char *)malloc(30);
 	c3 = DecimalToRoman(400);
-	ck_assert_str_eq(c3,"CD");			
+	ck_assert_str_eq(c3,"CD");
+
+//Test-12-3
+}
+END_TEST
+
+START_TEST(whenDecimalToRomanIsPassedFiveHundredItShouldReturnD)
+{
+#line 292
+	
+	c3 = (char *)malloc(30);
+	c3 = DecimalToRoman(500);
+	ck_assert_str_eq(c3,"D");			
 }
 END_TEST
 
@@ -560,6 +572,7 @@ int main(void)
     tcase_add_test(tc1_1, whenDecimalToRomanIsPassedTwoHundredItShouldReturnCC);
     tcase_add_test(tc1_1, whenDecimalToRomanIsPassedThreeHundredItShouldReturnCCC);
     tcase_add_test(tc1_1, whenDecimalToRomanIsPassedFourHundredItShouldReturnCD);
+    tcase_add_test(tc1_1, whenDecimalToRomanIsPassedFiveHundredItShouldReturnD);
 
     srunner_run_all(sr, CK_ENV);
     nf = srunner_ntests_failed(sr);
