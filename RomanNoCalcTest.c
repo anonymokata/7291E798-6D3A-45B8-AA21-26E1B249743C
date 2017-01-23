@@ -104,7 +104,7 @@ START_TEST(whenRomanToDecimalIsPassedIitReturnsOne)
 #line 55
 	
 	RomanNo[0] = 'I';
-	ck_assert_int_eq(IpCheck(RomanNo),1);
+	ck_assert_int_eq(RomanToDecimal(RomanNo),1);
 
 //Test-3-1
 }
@@ -115,7 +115,8 @@ START_TEST(whenRomanToDecimalIsPassedVitReturnsFive)
 #line 61
 	
 	RomanNo[0] = 'V';
-	ck_assert_int_eq(IpCheck(RomanNo),5);
+	ck_assert_int_eq(RomanToDecimal(RomanNo),5);
+
 
 
 }

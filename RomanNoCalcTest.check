@@ -56,5 +56,11 @@ char RomanNo[20];
 	RomanNo[0] = 'I';
 	ck_assert_int_eq(RomanToDecimal(RomanNo),1);
 
+//Test-3-1
+#test whenRomanToDecimalIsPassedVitReturnsFive 
+	
+	RomanNo[0] = 'V';
+	ck_assert_int_eq(RomanToDecimal(RomanNo),5);
+
 
 
