@@ -299,4 +299,25 @@ char *c3;
 	
 	c3 = (char *)malloc(30);
 	c3 = DecimalToRoman(600);
-	ck_assert_str_eq(c3,"DC");			
+	ck_assert_str_eq(c3,"DC");
+
+//Test-12-6
+#test whenDecimalToRomanIsPassedSevenHundredItShouldReturnDCC
+	
+	c3 = (char *)malloc(30);
+	c3 = DecimalToRoman(700);
+	ck_assert_str_eq(c3,"DCC");
+
+//Test-12-7
+#test whenDecimalToRomanIsPassedEightxHundredItShouldReturnDCCC
+	
+	c3 = (char *)malloc(30);
+	c3 = DecimalToRoman(800);
+	ck_assert_str_eq(c3,"DCCC");
+
+//Test-12-8
+#test whenDecimalToRomanIsPassedNineHundredItShouldReturnCM
+	
+	c3 = (char *)malloc(30);
+	c3 = DecimalToRoman(900);
+	ck_assert_str_eq(c3,"CM");			
