@@ -7,12 +7,13 @@
 
 #line 1 "RomanNoCalcTest.check"
 #include "IpNumberCheck.h"
+#include "RomanToDecimal.h"
 char RomanNo[20];
 //Visit TestPlan.txt for more details about the tests
 //Test-1 
 START_TEST(whenIpNumberCheckispassedIitReturnsOne)
 {
-#line 6
+#line 7
 	
 	RomanNo[0] = 'I';
 	ck_assert_int_eq(IpCheck(RomanNo),1);
@@ -23,7 +24,7 @@ END_TEST
 
 START_TEST(whenIpNumberCheckispassedVitReturnsOne)
 {
-#line 12
+#line 13
 	
 	RomanNo[0] = 'V';
 	ck_assert_int_eq(IpCheck(RomanNo),1);
@@ -34,7 +35,7 @@ END_TEST
 
 START_TEST(whenIpNumberCheckispassedXitReturnsOne)
 {
-#line 18
+#line 19
 	
 	RomanNo[0] = 'X';
 	ck_assert_int_eq(IpCheck(RomanNo),1);
@@ -45,7 +46,7 @@ END_TEST
 
 START_TEST(whenIpNumberCheckispassedLitReturnsOne)
 {
-#line 24
+#line 25
 	
 	RomanNo[0] = 'L';
 	ck_assert_int_eq(IpCheck(RomanNo),1);
@@ -56,7 +57,7 @@ END_TEST
 
 START_TEST(whenIpNumberCheckispassedCitReturnsOne)
 {
-#line 30
+#line 31
 	
 	RomanNo[0] = 'C';
 	ck_assert_int_eq(IpCheck(RomanNo),1);
@@ -67,7 +68,7 @@ END_TEST
 
 START_TEST(whenIpNumberCheckispassedDitReturnsOne)
 {
-#line 36
+#line 37
 	
 	RomanNo[0] = 'D';
 	ck_assert_int_eq(IpCheck(RomanNo),1);
@@ -78,7 +79,7 @@ END_TEST
 
 START_TEST(whenIpNumberCheckispassedMitReturnsOne)
 {
-#line 42
+#line 43
 	
 	RomanNo[0] = 'M';
 	ck_assert_int_eq(IpCheck(RomanNo),1);
@@ -89,10 +90,24 @@ END_TEST
 
 START_TEST(whenIpNumberCheckIsPassedRomanNumberStringItReturnsOne)
 {
-#line 48
+#line 49
 	
 	char RomanNo1[] = "MVXLI";
 	ck_assert_int_eq(IpCheck(RomanNo1),1);
+
+//Test-3 
+}
+END_TEST
+
+START_TEST(whenRomanToDecimalIsPassedIitReturnsOne)
+{
+#line 55
+	
+	RomanNo[0] = 'I';
+	ck_assert_int_eq(IpCheck(RomanNo),1);
+
+
+
 
 
 
@@ -115,6 +130,7 @@ int main(void)
     tcase_add_test(tc1_1, whenIpNumberCheckispassedDitReturnsOne);
     tcase_add_test(tc1_1, whenIpNumberCheckispassedMitReturnsOne);
     tcase_add_test(tc1_1, whenIpNumberCheckIsPassedRomanNumberStringItReturnsOne);
+    tcase_add_test(tc1_1, whenRomanToDecimalIsPassedIitReturnsOne);
 
     srunner_run_all(sr, CK_ENV);
     nf = srunner_ntests_failed(sr);
