@@ -30,7 +30,34 @@ after test for 'I;' move to another Input 'V', and we will move from testing of 
 Will move from checking one single digit number to number with multiple characters.
 
 i.e if Input is 'MVXLI' test PASS, if input is 'MvXLI' or any character of input string is in lowwer case or not from Roman character set, the test should fail.
+=======================================================================
+>Test-3
+Convert Roman number to Decimal (Its known as Hindi-Arebic Nuber system i.e 1,2,3 etc)
+We will start with simple conversion,
+i.e if input 'I' conversion should be 1
+i.e If input 'I' ->> Conversion function output 1 ->> Test pass
 
+after test for 'I;' move to another Input 'V', and we will move from testing of one Input to another in folllowing manor.
+
+>>Test-3-1: if Input is 'V' Output is '5' test PASS, else test fail.
+>>Test-3-2: if Input is 'X' Output is '10' test PASS, else test fail.
+>>Test-3-3: if Input is 'L' Output is '50' test PASS, else test fail.
+>>Test-3-4: if Input is 'C' Output is '100' test PASS, else test fail.
+>>Test-3-5: if Input is 'D' Output is '500' test PASS, else test fail.
+>>Test-3-6: if Input is 'M' Output is '1000' test PASS, else test fail.
+=======================================================================
+>Test-4
+Will move from converting one single digit number to number with string.
+i.e Input 'MDCLXVI' if Output 1666 ->> Test pass
+=======================================================================
+>Test-5
+In Roman number system if lesser numeral is placed before higher value number then its conversion to decimal would be >> Big Number - small number <<.
+
+i.e 'IV' = 4 (V - I) not 6 (I + V)
+So if Input is 'IV' and output is 4 test pass
+
+another example would be 'VL' = 45, 'XC' = 90, 'CM' = 900 etc..
+=======================================================================
 
 
 

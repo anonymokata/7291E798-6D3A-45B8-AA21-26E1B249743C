@@ -43,5 +43,11 @@ char RomanNo[20];
 	RomanNo[0] = 'M';
 	ck_assert_int_eq(IpCheck(RomanNo),1);
 
+//Test-2
+#test whenIpNumberCheckIsPassedRomanNumberStringItReturnsOne
+	
+	char RomanNo1[] = "MVXLI";
+	ck_assert_int_eq(IpCheck(RomanNo1),1);
+
 
 
