@@ -54,10 +54,7 @@ char RomanNo[20];
 #test whenRomanToDecimalIsPassedIitReturnsOne 
 	
 	RomanNo[0] = 'I';
-	ck_assert_int_eq(IpCheck(RomanNo),1);
-
-
-
+	ck_assert_int_eq(RomanToDecimal(RomanNo),1);
 
 
 

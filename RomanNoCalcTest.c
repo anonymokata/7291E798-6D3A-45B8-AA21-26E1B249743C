@@ -106,9 +106,16 @@ START_TEST(whenRomanToDecimalIsPassedIitReturnsOne)
 	RomanNo[0] = 'I';
 	ck_assert_int_eq(IpCheck(RomanNo),1);
 
+//Test-3-1
+}
+END_TEST
 
-
-
+START_TEST(whenRomanToDecimalIsPassedVitReturnsFive)
+{
+#line 61
+	
+	RomanNo[0] = 'V';
+	ck_assert_int_eq(IpCheck(RomanNo),5);
 
 
 }
@@ -131,6 +138,7 @@ int main(void)
     tcase_add_test(tc1_1, whenIpNumberCheckispassedMitReturnsOne);
     tcase_add_test(tc1_1, whenIpNumberCheckIsPassedRomanNumberStringItReturnsOne);
     tcase_add_test(tc1_1, whenRomanToDecimalIsPassedIitReturnsOne);
+    tcase_add_test(tc1_1, whenRomanToDecimalIsPassedVitReturnsFive);
 
     srunner_run_all(sr, CK_ENV);
     nf = srunner_ntests_failed(sr);
