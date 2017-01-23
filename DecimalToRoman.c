@@ -9,7 +9,12 @@ char *DecimalToRoman(int decimal)
 	static char *ones[] = {"1","I","II","III","IV","V","VI","VII","VIII","IX"};
 	char *RomanNo;
 	RomanNo = malloc(n);
-	if(decimal >= 100)
+	if(decimal >= 1000)
+	{
+		RomanNo[i] = 'M';
+		i++;		
+	}	
+	if((decimal >= 100) && (decimal < 1000))
 	{
 		value = decimal - (decimal%100);	
 		strcat(RomanNo, hundreds[value/100]);

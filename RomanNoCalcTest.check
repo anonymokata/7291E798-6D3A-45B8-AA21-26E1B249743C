@@ -334,4 +334,11 @@ char *c3;
 	
 	c3 = (char *)malloc(30);
 	c3 = DecimalToRoman(999);
-	ck_assert_str_eq(c3,"CMXCIX");			
+	ck_assert_str_eq(c3,"CMXCIX");	
+
+//Test-14
+#test whenDecimalToRomanIsPassed1000ItShouldReturnM
+	
+	c3 = (char *)malloc(30);
+	c3 = DecimalToRoman(1000);
+	ck_assert_str_eq(c3,"M");			
