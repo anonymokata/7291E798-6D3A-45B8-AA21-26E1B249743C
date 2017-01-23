@@ -137,5 +137,12 @@ char RomanNo3[] = "IV";
 	c1 = (char *)malloc(30);
 	c1 = DecimalToRoman(2);
 	ck_assert_str_eq(c1,"II");
+
+//Test-9-2
+#test whenDecimalToRomanIsPassedThreeItShouldReturnIII
+	char *c1;
+	c1 = (char *)malloc(30);
+	c1 = DecimalToRoman(3);
+	ck_assert_str_eq(c1,"III");
 	
 
