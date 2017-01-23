@@ -144,5 +144,20 @@ char RomanNo3[] = "IV";
 	c1 = (char *)malloc(30);
 	c1 = DecimalToRoman(3);
 	ck_assert_str_eq(c1,"III");
+
+//Test-9-3
+#test whenDecimalToRomanIsPassedFourItShouldReturnIV
+	char *c1;
+	c1 = (char *)malloc(30);
+	c1 = DecimalToRoman(4);
+	ck_assert_str_eq(c1,"IV");
+
+//Test-9-4
+#test whenDecimalToRomanIsPassedFiveItShouldReturnV
+	char *c1;
+	c1 = (char *)malloc(30);
+	c1 = DecimalToRoman(5);
+	ck_assert_str_eq(c1,"V");
+
 	
 

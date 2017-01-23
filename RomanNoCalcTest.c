@@ -264,6 +264,31 @@ START_TEST(whenDecimalToRomanIsPassedThreeItShouldReturnIII)
 	c1 = (char *)malloc(30);
 	c1 = DecimalToRoman(3);
 	ck_assert_str_eq(c1,"III");
+
+//Test-9-3
+}
+END_TEST
+
+START_TEST(whenDecimalToRomanIsPassedFourItShouldReturnIV)
+{
+#line 150
+	char *c1;
+	c1 = (char *)malloc(30);
+	c1 = DecimalToRoman(4);
+	ck_assert_str_eq(c1,"IV");
+
+//Test-9-4
+}
+END_TEST
+
+START_TEST(whenDecimalToRomanIsPassedFiveItShouldReturnV)
+{
+#line 157
+	char *c1;
+	c1 = (char *)malloc(30);
+	c1 = DecimalToRoman(5);
+	ck_assert_str_eq(c1,"V");
+
 	
 
 }
@@ -300,6 +325,8 @@ int main(void)
     tcase_add_test(tc1_1, whenDecimalToRomanIsPassedOneItShouldReturnI);
     tcase_add_test(tc1_1, whenDecimalToRomanIsPassedTwoItShouldReturnII);
     tcase_add_test(tc1_1, whenDecimalToRomanIsPassedThreeItShouldReturnIII);
+    tcase_add_test(tc1_1, whenDecimalToRomanIsPassedFourItShouldReturnIV);
+    tcase_add_test(tc1_1, whenDecimalToRomanIsPassedFiveItShouldReturnV);
 
     srunner_run_all(sr, CK_ENV);
     nf = srunner_ntests_failed(sr);
