@@ -264,4 +264,11 @@ char *c3;
 	
 	c3 = (char *)malloc(30);
 	c3 = DecimalToRoman(100);
-	ck_assert_str_eq(c3,"C");		
+	ck_assert_str_eq(c3,"C");
+
+//Test-12
+#test whenDecimalToRomanIsPassedTwoHundredItShouldReturnCC
+	
+	c3 = (char *)malloc(30);
+	c3 = DecimalToRoman(200);
+	ck_assert_str_eq(c3,"CC");		
