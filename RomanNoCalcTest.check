@@ -208,5 +208,12 @@ char *c2;
 	
 	c2 = (char *)malloc(30);
 	c2 = DecimalToRoman(30);
-	ck_assert_str_eq(c2,"XXX");		
+	ck_assert_str_eq(c2,"XXX");	
+
+//Test-10-3
+#test whenDecimalToRomanIsPassedFourtyItShouldReturnXL
+	
+	c2 = (char *)malloc(30);
+	c2 = DecimalToRoman(40);
+	ck_assert_str_eq(c2,"XL");		
 
