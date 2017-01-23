@@ -165,5 +165,13 @@ char RomanNo3[] = "IV";
 	c1 = (char *)malloc(30);
 	c1 = DecimalToRoman(6);
 	ck_assert_str_eq(c1,"VI");
+
+//Test-9-6
+#test whenDecimalToRomanIsPassedSevenItShouldReturnVII
+	char *c1;
+	c1 = (char *)malloc(30);
+	c1 = DecimalToRoman(7);
+	ck_assert_str_eq(c1,"VII");
+
 	
 

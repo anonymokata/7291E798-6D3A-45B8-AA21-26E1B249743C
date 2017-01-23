@@ -300,6 +300,19 @@ START_TEST(whenDecimalToRomanIsPassedSixItShouldReturnVI)
 	c1 = (char *)malloc(30);
 	c1 = DecimalToRoman(6);
 	ck_assert_str_eq(c1,"VI");
+
+//Test-9-6
+}
+END_TEST
+
+START_TEST(whenDecimalToRomanIsPassedSevenItShouldReturnVII)
+{
+#line 171
+	char *c1;
+	c1 = (char *)malloc(30);
+	c1 = DecimalToRoman(7);
+	ck_assert_str_eq(c1,"VII");
+
 	
 
 }
@@ -339,6 +352,7 @@ int main(void)
     tcase_add_test(tc1_1, whenDecimalToRomanIsPassedFourItShouldReturnIV);
     tcase_add_test(tc1_1, whenDecimalToRomanIsPassedFiveItShouldReturnV);
     tcase_add_test(tc1_1, whenDecimalToRomanIsPassedSixItShouldReturnVI);
+    tcase_add_test(tc1_1, whenDecimalToRomanIsPassedSevenItShouldReturnVII);
 
     srunner_run_all(sr, CK_ENV);
     nf = srunner_ntests_failed(sr);
