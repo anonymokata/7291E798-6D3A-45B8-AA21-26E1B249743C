@@ -2,6 +2,7 @@
 #include "RomanToDecimal.h"
 char RomanNo[20];
 char RomanNo1[] = "MDCLXVI";
+char RomanNo2[] = "IV";
 //Visit TestPlan.txt for more details about the tests
 //Test-1 
 #test whenIpNumberCheckispassedIitReturnsOne 
@@ -95,5 +96,10 @@ char RomanNo1[] = "MDCLXVI";
 //Test-4
 #test whenRomanToDecimalIsPassedStrigItShouldReturnAdditionOfEachCharValue							
 
-	RomanNo[0] = 'M';
 	ck_assert_int_eq(RomanToDecimal(RomanNo1),1666);
+
+//Test-5
+#test whenRomanToDecimalIsPassedIVItShouldReturnFour							
+
+	ck_assert_int_eq(RomanToDecimal(RomanNo2),4);
+

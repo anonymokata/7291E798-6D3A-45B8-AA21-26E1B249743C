@@ -10,11 +10,12 @@
 #include "RomanToDecimal.h"
 char RomanNo[20];
 char RomanNo1[] = "MDCLXVI";
+char RomanNo2[] = "IV";
 //Visit TestPlan.txt for more details about the tests
 //Test-1 
 START_TEST(whenIpNumberCheckispassedIitReturnsOne)
 {
-#line 8
+#line 9
 	
 	RomanNo[0] = 'I';
 	ck_assert_int_eq(IpCheck(RomanNo),1);
@@ -25,7 +26,7 @@ END_TEST
 
 START_TEST(whenIpNumberCheckispassedVitReturnsOne)
 {
-#line 14
+#line 15
 	
 	RomanNo[0] = 'V';
 	ck_assert_int_eq(IpCheck(RomanNo),1);
@@ -36,7 +37,7 @@ END_TEST
 
 START_TEST(whenIpNumberCheckispassedXitReturnsOne)
 {
-#line 20
+#line 21
 	
 	RomanNo[0] = 'X';
 	ck_assert_int_eq(IpCheck(RomanNo),1);
@@ -47,7 +48,7 @@ END_TEST
 
 START_TEST(whenIpNumberCheckispassedLitReturnsOne)
 {
-#line 26
+#line 27
 	
 	RomanNo[0] = 'L';
 	ck_assert_int_eq(IpCheck(RomanNo),1);
@@ -58,7 +59,7 @@ END_TEST
 
 START_TEST(whenIpNumberCheckispassedCitReturnsOne)
 {
-#line 32
+#line 33
 	
 	RomanNo[0] = 'C';
 	ck_assert_int_eq(IpCheck(RomanNo),1);
@@ -69,7 +70,7 @@ END_TEST
 
 START_TEST(whenIpNumberCheckispassedDitReturnsOne)
 {
-#line 38
+#line 39
 	
 	RomanNo[0] = 'D';
 	ck_assert_int_eq(IpCheck(RomanNo),1);
@@ -80,7 +81,7 @@ END_TEST
 
 START_TEST(whenIpNumberCheckispassedMitReturnsOne)
 {
-#line 44
+#line 45
 	
 	RomanNo[0] = 'M';
 	ck_assert_int_eq(IpCheck(RomanNo),1);
@@ -91,7 +92,7 @@ END_TEST
 
 START_TEST(whenIpNumberCheckIsPassedRomanNumberStringItReturnsOne)
 {
-#line 50
+#line 51
 	
 	ck_assert_int_eq(IpCheck(RomanNo1),1);
 
@@ -101,7 +102,7 @@ END_TEST
 
 START_TEST(whenRomanToDecimalIsPassedIitReturnsOne)
 {
-#line 55
+#line 56
 	
 	RomanNo[0] = 'I';
 	ck_assert_int_eq(RomanToDecimal(RomanNo),1);
@@ -112,7 +113,7 @@ END_TEST
 
 START_TEST(whenRomanToDecimalIsPassedVitReturnsFive)
 {
-#line 61
+#line 62
 	
 	RomanNo[0] = 'V';
 	ck_assert_int_eq(RomanToDecimal(RomanNo),5);
@@ -123,7 +124,7 @@ END_TEST
 
 START_TEST(whenRomanToDecimalIsPassedXitReturnsTen)
 {
-#line 67
+#line 68
 	
 	RomanNo[0] = 'X';
 	ck_assert_int_eq(RomanToDecimal(RomanNo),10);
@@ -134,7 +135,7 @@ END_TEST
 
 START_TEST(whenRomanToDecimalIsPassedLitReturnsFifty)
 {
-#line 73
+#line 74
 	
 	RomanNo[0] = 'L';
 	ck_assert_int_eq(RomanToDecimal(RomanNo),50);
@@ -145,7 +146,7 @@ END_TEST
 
 START_TEST(whenRomanToDecimalIsPassedCitReturnsHundred)
 {
-#line 79
+#line 80
 	
 	RomanNo[0] = 'C';
 	ck_assert_int_eq(RomanToDecimal(RomanNo),100);
@@ -156,7 +157,7 @@ END_TEST
 
 START_TEST(whenRomanToDecimalIsPassedDitReturnsFiveHundred)
 {
-#line 85
+#line 86
 	
 	RomanNo[0] = 'D';
 	ck_assert_int_eq(RomanToDecimal(RomanNo),500);
@@ -167,7 +168,7 @@ END_TEST
 
 START_TEST(whenRomanToDecimalIsPassedMitReturnsThousand)
 {
-#line 91
+#line 92
 	
 	RomanNo[0] = 'M';
 	ck_assert_int_eq(RomanToDecimal(RomanNo),1000);
@@ -178,10 +179,20 @@ END_TEST
 
 START_TEST(whenRomanToDecimalIsPassedStrigItShouldReturnAdditionOfEachCharValue)
 {
-#line 97
+#line 98
 
-	RomanNo[0] = 'M';
 	ck_assert_int_eq(RomanToDecimal(RomanNo1),1666);
+
+//Test-5
+}
+END_TEST
+
+START_TEST(whenRomanToDecimalIsPassedIVItShouldReturnFour)
+{
+#line 103
+
+	ck_assert_int_eq(RomanToDecimal(RomanNo2),4);
+
 }
 END_TEST
 
@@ -209,6 +220,7 @@ int main(void)
     tcase_add_test(tc1_1, whenRomanToDecimalIsPassedDitReturnsFiveHundred);
     tcase_add_test(tc1_1, whenRomanToDecimalIsPassedMitReturnsThousand);
     tcase_add_test(tc1_1, whenRomanToDecimalIsPassedStrigItShouldReturnAdditionOfEachCharValue);
+    tcase_add_test(tc1_1, whenRomanToDecimalIsPassedIVItShouldReturnFour);
 
     srunner_run_all(sr, CK_ENV);
     nf = srunner_ntests_failed(sr);

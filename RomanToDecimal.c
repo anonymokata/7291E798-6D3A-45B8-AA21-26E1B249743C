@@ -38,7 +38,13 @@ int RomanToDecimal(char RomanNo[])
 	int length = strlen(RomanNo);
 	for(i = 0; i<length; i++)
 	{
-		DecimalNo += GetDecimal(RomanNo[i]);
+		if(GetDecimal(RomanNo[i]) < GetDecimal(RomanNo[i+1]))
+		{
+			DecimalNo += GetDecimal(RomanNo[i+1]) - GetDecimal(RomanNo[i]);
+			i++;
+		}
+		else
+			DecimalNo += GetDecimal(RomanNo[i]);
 	}
 	return DecimalNo;
 }
