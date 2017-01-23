@@ -4,7 +4,7 @@
 char *DecimalToRoman(int decimal)
 {
 	static int i=0,n=20;
-	static char *ones[] = {"1","I","II","III","IV","V"};
+	static char *ones[] = {"1","I","II","III","IV","V","VI"};
 	char *RomanNo;
 	RomanNo = malloc(n);
 	strcat(RomanNo, ones[decimal]);
