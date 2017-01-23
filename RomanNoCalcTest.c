@@ -160,6 +160,17 @@ START_TEST(whenRomanToDecimalIsPassedDitReturnsFiveHundred)
 	
 	RomanNo[0] = 'D';
 	ck_assert_int_eq(RomanToDecimal(RomanNo),500);
+
+//Test-3-6
+}
+END_TEST
+
+START_TEST(whenRomanToDecimalIsPassedMitReturnsThousand)
+{
+#line 91
+	
+	RomanNo[0] = 'M';
+	ck_assert_int_eq(RomanToDecimal(RomanNo),1000);
 }
 END_TEST
 
@@ -185,6 +196,7 @@ int main(void)
     tcase_add_test(tc1_1, whenRomanToDecimalIsPassedLitReturnsFifty);
     tcase_add_test(tc1_1, whenRomanToDecimalIsPassedCitReturnsHundred);
     tcase_add_test(tc1_1, whenRomanToDecimalIsPassedDitReturnsFiveHundred);
+    tcase_add_test(tc1_1, whenRomanToDecimalIsPassedMitReturnsThousand);
 
     srunner_run_all(sr, CK_ENV);
     nf = srunner_ntests_failed(sr);
