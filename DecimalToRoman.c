@@ -7,8 +7,16 @@ char *DecimalToRoman(int decimal)
 	static char *ones[] = {"1","I","II","III","IV","V","VI","VII","VIII","IX"};
 	char *RomanNo;
 	RomanNo = malloc(n);
-	strcat(RomanNo, ones[decimal]);
-	i = i + strlen(ones[decimal]);
+	if(decimal == 10)
+	{
+		RomanNo[0] = 'X';
+		i++;
+	}
+	else
+	{
+		strcat(RomanNo, ones[decimal]);
+		i = i + strlen(ones[decimal]);
+	}
 	RomanNo[i] = '\0';
 	return RomanNo;
 }
