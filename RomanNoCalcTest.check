@@ -320,4 +320,18 @@ char *c3;
 	
 	c3 = (char *)malloc(30);
 	c3 = DecimalToRoman(900);
-	ck_assert_str_eq(c3,"CM");			
+	ck_assert_str_eq(c3,"CM");
+
+//Test-13
+#test whenDecimalToRomanIsPassed111ItShouldReturnCXI
+	
+	c3 = (char *)malloc(30);
+	c3 = DecimalToRoman(111);
+	ck_assert_str_eq(c3,"CXI");
+
+//Test-13
+#test whenDecimalToRomanIsPassed999ItShouldReturnCMXCIX
+	
+	c3 = (char *)malloc(30);
+	c3 = DecimalToRoman(999);
+	ck_assert_str_eq(c3,"CMXCIX");			

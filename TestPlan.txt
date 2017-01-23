@@ -137,5 +137,18 @@ Test Cases:
  Test-12-6  || 700   ||  'DCC'
  Test-12-7  || 800   ||  'DCCC'
  Test-12-8  || 900   ||  'CM'
-
-
+======================================================================= 
+>Test-13
+If Input to Conversion function is 111 output should be CXI
+If Input to Conversion function is 899 output should be DCCCXCIX
+=======================================================================
+>Test-14
+If Input to Conversion function is 1000 output should be M
+Here in case of thousand 
+Test Cases:
+     No     ||  I/P   ||  O/P   |
+------------||--------||--------|
+ Test-14-1  || 2000   ||  'MM'   
+ Test-14-2  || 3000   ||  'MMM'
+ Test-14-3  || 9000   ||  'MMMMMMMMM'
+ 

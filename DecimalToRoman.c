@@ -11,8 +11,10 @@ char *DecimalToRoman(int decimal)
 	RomanNo = malloc(n);
 	if(decimal >= 100)
 	{
-		strcat(RomanNo, hundreds[decimal/100]);
-		i = i + strlen(hundreds[decimal/100]);
+		value = decimal - (decimal%100);	
+		strcat(RomanNo, hundreds[value/100]);
+		i = i + strlen(hundreds[value/100]);
+		decimal -= value;
 	}
 	if((decimal >= 10) && (decimal < 100))
 	{
