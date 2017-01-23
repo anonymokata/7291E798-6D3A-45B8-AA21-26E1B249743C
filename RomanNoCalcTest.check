@@ -196,5 +196,10 @@ char *c2;
 	c2 = DecimalToRoman(10);
 	ck_assert_str_eq(c2,"X");
 	
-
+//Test-10-1
+#test whenDecimalToRomanIsPassedTwentyItShouldReturnXX
+	
+	c2 = (char *)malloc(30);
+	c2 = DecimalToRoman(20);
+	ck_assert_str_eq(c2,"XX");	
 

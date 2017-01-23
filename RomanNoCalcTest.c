@@ -351,7 +351,17 @@ START_TEST(whenDecimalToRomanIsPassedTenItShouldReturnX)
 	c2 = DecimalToRoman(10);
 	ck_assert_str_eq(c2,"X");
 	
+//Test-10-1
+}
+END_TEST
 
+START_TEST(whenDecimalToRomanIsPassedTwentyItShouldReturnXX)
+{
+#line 201
+	
+	c2 = (char *)malloc(30);
+	c2 = DecimalToRoman(20);
+	ck_assert_str_eq(c2,"XX");	
 
 }
 END_TEST
@@ -394,6 +404,7 @@ int main(void)
     tcase_add_test(tc1_1, whenDecimalToRomanIsPassedEightItShouldReturnVIII);
     tcase_add_test(tc1_1, whenDecimalToRomanIsPassedNineItShouldReturnIX);
     tcase_add_test(tc1_1, whenDecimalToRomanIsPassedTenItShouldReturnX);
+    tcase_add_test(tc1_1, whenDecimalToRomanIsPassedTwentyItShouldReturnXX);
 
     srunner_run_all(sr, CK_ENV);
     nf = srunner_ntests_failed(sr);
