@@ -1,8 +1,10 @@
 #include "IpNumberCheck.h"
 #include "RomanToDecimal.h"
+#include "AddOrSub.h"
 char RomanNo[20];
-char RomanNo1[] = "MDCLXVI";
-char RomanNo2[] = "IV";
+char RomanNo1[] = "MCDLV";
+char RomanNo2[] = "MXLVI";
+char RomanNo3[] = "IV";
 //Visit TestPlan.txt for more details about the tests
 //Test-1 
 #test whenIpNumberCheckispassedIitReturnsOne 
@@ -96,10 +98,15 @@ char RomanNo2[] = "IV";
 //Test-4
 #test whenRomanToDecimalIsPassedStrigItShouldReturnAdditionOfEachCharValue							
 
-	ck_assert_int_eq(RomanToDecimal(RomanNo1),1666);
+	ck_assert_int_eq(RomanToDecimal(RomanNo1),1455);
 
 //Test-5
 #test whenRomanToDecimalIsPassedIVItShouldReturnFour							
 
-	ck_assert_int_eq(RomanToDecimal(RomanNo2),4);
+	ck_assert_int_eq(RomanToDecimal(RomanNo3),4);
+
+//Test-6
+#test whenAddOrSubIsPassedTwoValuesItReturnsItAddition							
+
+	ck_assert_int_eq(AddOrSub(RomanToDecimal(RomanNo1),RomanToDecimal(RomanNo2)),2501);
 

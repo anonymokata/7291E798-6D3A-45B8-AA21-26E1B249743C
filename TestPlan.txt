@@ -58,6 +58,26 @@ So if Input is 'IV' and output is 4 test pass
 
 another example would be 'VL' = 45, 'XC' = 90, 'CM' = 900 etc..
 =======================================================================
+>Test-6
+Now we will go ahead to test Bigger number 
+i.e if Input is 'MXLVI'Output is 1046 test is passed
 
+what we do here??
+Ans:
+here 'MLXLVI' = M(1000) + L(50) + XL(L-X=50-10=40) + V(5) + I(1) = 1096
+=======================================================================
+>Test-7
+Perform Addition operation
+If Input 1 = 'MCDLV' = 1455
+&  Input 2 = 'MXLVI' = 1046
+
+output should be 2501 if its 2501 test pass.
+=======================================================================
+>Test-8
+Perform Subtraction operation
+If Input 1 = 'MCDLV' = 1455
+&  Input 2 = 'MXLVI' = 1046
+
+output should be 49 if its 49 test pass.
 
 
