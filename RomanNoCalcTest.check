@@ -1,6 +1,7 @@
 #include "IpNumberCheck.h"
 #include "RomanToDecimal.h"
 char RomanNo[20];
+char RomanNo1[] = "MDCLXVI";
 //Visit TestPlan.txt for more details about the tests
 //Test-1 
 #test whenIpNumberCheckispassedIitReturnsOne 
@@ -47,7 +48,6 @@ char RomanNo[20];
 //Test-2
 #test whenIpNumberCheckIsPassedRomanNumberStringItReturnsOne
 	
-	char RomanNo1[] = "MVXLI";
 	ck_assert_int_eq(IpCheck(RomanNo1),1);
 
 //Test-3 
@@ -91,3 +91,9 @@ char RomanNo[20];
 	
 	RomanNo[0] = 'M';
 	ck_assert_int_eq(RomanToDecimal(RomanNo),1000);
+
+//Test-4
+#test whenRomanToDecimalIsPassedStrigItShouldReturnAdditionOfEachCharValue							
+
+	RomanNo[0] = 'M';
+	ck_assert_int_eq(RomanToDecimal(RomanNo1),1666);

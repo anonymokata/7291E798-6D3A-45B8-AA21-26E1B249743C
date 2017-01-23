@@ -1,10 +1,9 @@
 #include<stdio.h>
+#include<string.h>
 
-int RomanToDecimal(char RomanNo[])
+static int GetDecimal(char RNo)
 {
-	int i = 0, DecimalNo = 0;
-
-	switch(RomanNo[i])
+	switch(RNo)
 	{
 		case 'I':
 			return 1;
@@ -30,5 +29,16 @@ int RomanToDecimal(char RomanNo[])
 		default:
 			return 0;
 			break;
+	}	
+
+}
+int RomanToDecimal(char RomanNo[])
+{
+	int i = 0, DecimalNo = 0;
+	int length = strlen(RomanNo);
+	for(i = 0; i<length; i++)
+	{
+		DecimalNo += GetDecimal(RomanNo[i]);
 	}
+	return DecimalNo;
 }
