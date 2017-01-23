@@ -42,3 +42,10 @@ Compile your test file with following command
 Run the executeable file with following command to test your result
 
 "./RomanNoCalcTest"
+========================================================================
+Use make file to run Main file.
+
+Type command "make"
+
+and then "./main"
+========================================================================
