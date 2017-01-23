@@ -241,7 +241,17 @@ START_TEST(whenDecimalToRomanIsPassedOneItShouldReturnI)
 	c1 = DecimalToRoman(1);
 	ck_assert_str_eq(c1,"I");
 
+//Test-9-1
+}
+END_TEST
 
+START_TEST(whenDecimalToRomanIsPassedTwoItShouldReturnII)
+{
+#line 136
+	char *c1;
+	c1 = (char *)malloc(30);
+	c1 = DecimalToRoman(2);
+	ck_assert_str_eq(c1,"II");
 	
 
 }
@@ -276,6 +286,7 @@ int main(void)
     tcase_add_test(tc1_1, whenSubIsPassedTwoValuesItReturnsItSubtraction);
     tcase_add_test(tc1_1, whenSubIsPassedTwoValuesItReturnsPositiveValueOfItsSubtraction);
     tcase_add_test(tc1_1, whenDecimalToRomanIsPassedOneItShouldReturnI);
+    tcase_add_test(tc1_1, whenDecimalToRomanIsPassedTwoItShouldReturnII);
 
     srunner_run_all(sr, CK_ENV);
     nf = srunner_ntests_failed(sr);

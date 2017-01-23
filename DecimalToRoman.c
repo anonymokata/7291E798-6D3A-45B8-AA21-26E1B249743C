@@ -4,13 +4,11 @@
 char *DecimalToRoman(int decimal)
 {
 	static int i=0,n=20;
-	//static int value;
+	static char *ones[] = {"1","I","II"};
 	char *RomanNo;
 	RomanNo = malloc(n);
-	if(decimal == 1)
-	{
-		RomanNo[i] = 'I';
-	}
-	RomanNo[i+1] = '\0';
+	strcat(RomanNo, ones[decimal]);
+	i = i + strlen(ones[decimal]);
+	RomanNo[i] = '\0';
 	return RomanNo;
 }

@@ -131,6 +131,11 @@ char RomanNo3[] = "IV";
 	c1 = DecimalToRoman(1);
 	ck_assert_str_eq(c1,"I");
 
-
+//Test-9-1
+#test whenDecimalToRomanIsPassedTwoItShouldReturnII
+	char *c1;
+	c1 = (char *)malloc(30);
+	c1 = DecimalToRoman(2);
+	ck_assert_str_eq(c1,"II");
 	
 
