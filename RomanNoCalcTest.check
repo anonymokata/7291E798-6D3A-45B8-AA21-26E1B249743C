@@ -215,5 +215,12 @@ char *c2;
 	
 	c2 = (char *)malloc(30);
 	c2 = DecimalToRoman(40);
-	ck_assert_str_eq(c2,"XL");		
+	ck_assert_str_eq(c2,"XL");	
+
+//Test-10-4
+#test whenDecimalToRomanIsPassedFiftyItShouldReturnL
+	
+	c2 = (char *)malloc(30);
+	c2 = DecimalToRoman(50);
+	ck_assert_str_eq(c2,"L");	
 

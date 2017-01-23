@@ -385,7 +385,19 @@ START_TEST(whenDecimalToRomanIsPassedFourtyItShouldReturnXL)
 	
 	c2 = (char *)malloc(30);
 	c2 = DecimalToRoman(40);
-	ck_assert_str_eq(c2,"XL");		
+	ck_assert_str_eq(c2,"XL");	
+
+//Test-10-4
+}
+END_TEST
+
+START_TEST(whenDecimalToRomanIsPassedFiftyItShouldReturnL)
+{
+#line 222
+	
+	c2 = (char *)malloc(30);
+	c2 = DecimalToRoman(50);
+	ck_assert_str_eq(c2,"L");	
 
 }
 END_TEST
@@ -431,6 +443,7 @@ int main(void)
     tcase_add_test(tc1_1, whenDecimalToRomanIsPassedTwentyItShouldReturnXX);
     tcase_add_test(tc1_1, whenDecimalToRomanIsPassedThirtyItShouldReturnXXX);
     tcase_add_test(tc1_1, whenDecimalToRomanIsPassedFourtyItShouldReturnXL);
+    tcase_add_test(tc1_1, whenDecimalToRomanIsPassedFiftyItShouldReturnL);
 
     srunner_run_all(sr, CK_ENV);
     nf = srunner_ntests_failed(sr);
