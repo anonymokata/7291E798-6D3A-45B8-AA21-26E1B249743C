@@ -199,11 +199,21 @@ START_TEST(whenRomanToDecimalIsPassedIVItShouldReturnFour)
 }
 END_TEST
 
-START_TEST(whenAddOrSubIsPassedTwoValuesItReturnsItAddition)
+START_TEST(whenAddIsPassedTwoValuesItReturnsItAddition)
 {
 #line 110
 
-	ck_assert_int_eq(AddOrSub(RomanToDecimal(RomanNo1),RomanToDecimal(RomanNo2)),2501);
+	ck_assert_int_eq(Add(RomanToDecimal(RomanNo1),RomanToDecimal(RomanNo2)),2501);
+
+//Test-7
+}
+END_TEST
+
+START_TEST(whenSubIsPassedTwoValuesItReturnsItSubtraction)
+{
+#line 115
+
+	ck_assert_int_eq(Sub(RomanToDecimal(RomanNo1),RomanToDecimal(RomanNo2)),409);
 
 }
 END_TEST
@@ -233,7 +243,8 @@ int main(void)
     tcase_add_test(tc1_1, whenRomanToDecimalIsPassedMitReturnsThousand);
     tcase_add_test(tc1_1, whenRomanToDecimalIsPassedStrigItShouldReturnAdditionOfEachCharValue);
     tcase_add_test(tc1_1, whenRomanToDecimalIsPassedIVItShouldReturnFour);
-    tcase_add_test(tc1_1, whenAddOrSubIsPassedTwoValuesItReturnsItAddition);
+    tcase_add_test(tc1_1, whenAddIsPassedTwoValuesItReturnsItAddition);
+    tcase_add_test(tc1_1, whenSubIsPassedTwoValuesItReturnsItSubtraction);
 
     srunner_run_all(sr, CK_ENV);
     nf = srunner_ntests_failed(sr);

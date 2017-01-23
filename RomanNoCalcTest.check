@@ -106,7 +106,12 @@ char RomanNo3[] = "IV";
 	ck_assert_int_eq(RomanToDecimal(RomanNo3),4);
 
 //Test-6
-#test whenAddOrSubIsPassedTwoValuesItReturnsItAddition							
+#test whenAddIsPassedTwoValuesItReturnsItAddition							
 
-	ck_assert_int_eq(AddOrSub(RomanToDecimal(RomanNo1),RomanToDecimal(RomanNo2)),2501);
+	ck_assert_int_eq(Add(RomanToDecimal(RomanNo1),RomanToDecimal(RomanNo2)),2501);
+
+//Test-7
+#test whenSubIsPassedTwoValuesItReturnsItSubtraction							
+
+	ck_assert_int_eq(Sub(RomanToDecimal(RomanNo1),RomanToDecimal(RomanNo2)),409);
 
