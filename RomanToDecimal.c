@@ -15,6 +15,9 @@ int RomanToDecimal(char RomanNo[])
 		case 'X':
 			return 10;
 			break;
+		case 'L':
+			return 50;
+			break;
 		default:
 			return 0;
 			break;
