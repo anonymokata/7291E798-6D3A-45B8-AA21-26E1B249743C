@@ -17,7 +17,7 @@ char RomanNo2[] = "MXLVI";
 char RomanNo3[] = "IV";
 char *c1;
 char *c2;
-
+char *c3;
 //Visit TestPlan.txt for more details about the tests
 //Test-1 
 START_TEST(whenIpNumberCheckispassedIitReturnsOne)
@@ -457,7 +457,19 @@ START_TEST(whenDecimalToRomanIsPassedElevenItShouldReturnXI)
 	
 	c2 = (char *)malloc(30);
 	c2 = DecimalToRoman(11);
-	ck_assert_str_eq(c2,"XI");		
+	ck_assert_str_eq(c2,"XI");
+
+//Test-12
+}
+END_TEST
+
+START_TEST(whenDecimalToRomanIsPassedHundredItShouldReturnC)
+{
+#line 264
+	
+	c3 = (char *)malloc(30);
+	c3 = DecimalToRoman(100);
+	ck_assert_str_eq(c3,"C");		
 }
 END_TEST
 
@@ -508,6 +520,7 @@ int main(void)
     tcase_add_test(tc1_1, whenDecimalToRomanIsPassedEightyItShouldReturnLXXX);
     tcase_add_test(tc1_1, whenDecimalToRomanIsPassedNintyItShouldReturnXC);
     tcase_add_test(tc1_1, whenDecimalToRomanIsPassedElevenItShouldReturnXI);
+    tcase_add_test(tc1_1, whenDecimalToRomanIsPassedHundredItShouldReturnC);
 
     srunner_run_all(sr, CK_ENV);
     nf = srunner_ntests_failed(sr);

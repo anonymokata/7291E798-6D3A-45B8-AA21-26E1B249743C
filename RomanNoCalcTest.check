@@ -9,7 +9,7 @@ char RomanNo2[] = "MXLVI";
 char RomanNo3[] = "IV";
 char *c1;
 char *c2;
-
+char *c3;
 //Visit TestPlan.txt for more details about the tests
 //Test-1 
 #test whenIpNumberCheckispassedIitReturnsOne 
@@ -257,4 +257,11 @@ char *c2;
 	
 	c2 = (char *)malloc(30);
 	c2 = DecimalToRoman(11);
-	ck_assert_str_eq(c2,"XI");		
+	ck_assert_str_eq(c2,"XI");
+
+//Test-12
+#test whenDecimalToRomanIsPassedHundredItShouldReturnC
+	
+	c3 = (char *)malloc(30);
+	c3 = DecimalToRoman(100);
+	ck_assert_str_eq(c3,"C");		
