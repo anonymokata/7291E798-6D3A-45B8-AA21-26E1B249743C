@@ -601,7 +601,43 @@ START_TEST(whenDecimalToRomanIsPassed1000ItShouldReturnM)
 	
 	c3 = (char *)malloc(30);
 	c3 = DecimalToRoman(1000);
-	ck_assert_str_eq(c3,"M");			
+	ck_assert_str_eq(c3,"M");
+
+//Test-14-1
+}
+END_TEST
+
+START_TEST(whenDecimalToRomanIsPassed2000ItShouldReturnMM)
+{
+#line 348
+	
+	c3 = (char *)malloc(30);
+	c3 = DecimalToRoman(2000);
+	ck_assert_str_eq(c3,"MM");
+
+//Test-14-2
+}
+END_TEST
+
+START_TEST(whenDecimalToRomanIsPassed3000ItShouldReturnMMM)
+{
+#line 355
+	
+	c3 = (char *)malloc(30);
+	c3 = DecimalToRoman(3000);
+	ck_assert_str_eq(c3,"MMM");
+
+//Test-14-3
+}
+END_TEST
+
+START_TEST(whenDecimalToRomanIsPassed9000ItShouldReturnMMMMMMMMM)
+{
+#line 362
+	
+	c3 = (char *)malloc(30);
+	c3 = DecimalToRoman(9000);
+	ck_assert_str_eq(c3,"MMMMMMMMM");			
 }
 END_TEST
 
@@ -664,6 +700,9 @@ int main(void)
     tcase_add_test(tc1_1, whenDecimalToRomanIsPassed111ItShouldReturnCXI);
     tcase_add_test(tc1_1, whenDecimalToRomanIsPassed999ItShouldReturnCMXCIX);
     tcase_add_test(tc1_1, whenDecimalToRomanIsPassed1000ItShouldReturnM);
+    tcase_add_test(tc1_1, whenDecimalToRomanIsPassed2000ItShouldReturnMM);
+    tcase_add_test(tc1_1, whenDecimalToRomanIsPassed3000ItShouldReturnMMM);
+    tcase_add_test(tc1_1, whenDecimalToRomanIsPassed9000ItShouldReturnMMMMMMMMM);
 
     srunner_run_all(sr, CK_ENV);
     nf = srunner_ntests_failed(sr);
