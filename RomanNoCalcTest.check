@@ -250,4 +250,11 @@ char *c2;
 	
 	c2 = (char *)malloc(30);
 	c2 = DecimalToRoman(90);
-	ck_assert_str_eq(c2,"XC");		
+	ck_assert_str_eq(c2,"XC");
+
+//Test-11
+#test whenDecimalToRomanIsPassedElevenItShouldReturnXI
+	
+	c2 = (char *)malloc(30);
+	c2 = DecimalToRoman(11);
+	ck_assert_str_eq(c2,"XI");		

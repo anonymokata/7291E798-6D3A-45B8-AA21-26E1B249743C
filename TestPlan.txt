@@ -110,28 +110,32 @@ If Input to Conversion function is 10 Output should be 'X'
 Test Cases:
     No     || I/P  ||  O/P   |
 -----------||------||--------|
- Test-9-1  || 20   ||  'XX'   
- Test-9-2  || 30   ||  'XXX'
- Test-9-3  || 40   ||  'XL'
- Test-9-4  || 50   ||  'L'
- Test-9-5  || 60   ||  'LX'   
- Test-9-6  || 70   ||  'LXX'
- Test-9-7  || 80   ||  'LXXX'
- Test-9-8  || 90   ||  'XC'
+ Test-10-1  || 20   ||  'XX'   
+ Test-10-2  || 30   ||  'XXX'
+ Test-10-3  || 40   ||  'XL'
+ Test-10-4  || 50   ||  'L'
+ Test-10-5  || 60   ||  'LX'   
+ Test-10-6  || 70   ||  'LXX'
+ Test-10-7  || 80   ||  'LXXX'
+ Test-10-8  || 90   ||  'XC'
 ======================================================================= 
 >Test-11
+If Input to Conversion function is 11 output should be XI
+If Input to Conversion function is 19 output should be XIX
+=======================================================================
+>Test-12
 We will start with Tripple digit number conversion.
 If Input to Conversion function is 100 Output should be 'C'
 Test Cases:
     No     ||  I/P  ||  O/P   |
 -----------||-------||--------|
- Test-9-1  || 200   ||  'CC'   
- Test-9-2  || 300   ||  'CCC'
- Test-9-3  || 400   ||  'CD'
- Test-9-4  || 500   ||  'D'
- Test-9-5  || 600   ||  'DC'   
- Test-9-6  || 700   ||  'DCC'
- Test-9-7  || 800   ||  'DCCC'
- Test-9-8  || 900   ||  'CM'
+ Test-12-1  || 200   ||  'CC'   
+ Test-12-2  || 300   ||  'CCC'
+ Test-12-3  || 400   ||  'CD'
+ Test-12-4  || 500   ||  'D'
+ Test-12-5  || 600   ||  'DC'   
+ Test-12-6  || 700   ||  'DCC'
+ Test-12-7  || 800   ||  'DCCC'
+ Test-12-8  || 900   ||  'CM'
 
 
